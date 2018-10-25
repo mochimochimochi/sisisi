@@ -1,0 +1,41 @@
+/*  file icon */
+
+// .u-noIconをつけたa自体と、.u-noIconをつけた内側はfile iconはつきません。
+
+=file_icon
+  display: inline-block
+  content: ''
+  width: 16px
+  height: 16px
+  background-repeat: no-repeat
+  vertical-align: text-bottom
+
+.u-blank
+  &::after
+    +file_icon
+    background: url('/sinicx/assets/img/common/icon-ex.png')
+    background-size: contain
+
+.u-pdf
+  &::after
+    +file_icon
+    background: url('/sinicx/assets/img/common/icon-pdf.png')
+    background-size: contain
+
+.u-xls
+  &::after
+    +file_icon
+    background: url('/sinicx/assets/img/common/icon-excel.png')
+    background-size: contain
+
+.u-doc
+  &::after
+    +file_icon
+    background: url('/sinicx/assets/img/common/icon-word.png')
+    background-size: contain
+
+.u-ppt
+  &::after
+    +file_icon
+    background: url('/sinicx/assets/img/common/icon-ppt.png')
+    background-size: contain
