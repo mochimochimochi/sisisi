@@ -1,0 +1,48 @@
+// tab
+
+.p-tab__title
+  overflow: hidden
+  border-bottom: 1px solid palette('site','skyblue')
+  padding-left: 0
+  margin-bottom: 60px
+  .p-tab__title__item
+    position: relative
+    width: 300px
+    height: 40px
+    font-size: 14px
+    margin: 0
+    list-style: none
+    background: #fff
+    border: 1px solid palette('site','skyblue')
+    padding: 10px 25px
+    float: left
+    border-bottom: none
+    border-top-right-radius: 10px
+    color: palette('site','skyblue')
+    font-weight: 600
+    &::after
+      position: absolute
+      right: 14px
+      content: '▼'
+    &.select
+      background: palette('site','skyblue')
+      color: palette('basic','white')
+
+.p-tab__content
+  display: none
+
+
+@media(max-width: $width-tb)
+  .p-tab__title
+    padding: 0
+    .p-tab__title__item
+      width: 50%
+      height: auto
+      font-size: 14px
+      padding: 8px 10px
+
+@media(max-width: $width-sp)
+  .p-tab__title
+    .p-tab__title__item
+      padding-left: 4px
+      font-size: 10px

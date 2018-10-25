@@ -1,0 +1,128 @@
+// 各ページ毎のスタイル
+
+// aboutus
+.aboutus
+  .p-catch
+    &__mainImgArea
+      position: relative
+      min-height: 150px
+      img.main__bg
+        width: 100%
+        min-height: 150px
+
+      .main__catch
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        z-index: 5000
+        margin: auto
+        width: 10%
+        min-width: 88px
+
+  .p-body
+    .p-chapter
+      padding: 6rem 0
+      p
+        font-size: 1.4rem
+      &:first-of-type
+        padding-top: 0
+      .aboutus__chapter__title
+        margin-top: 0
+        font-size: 3.6rem
+        font-weight: 400
+        text-align: center
+
+      &.aboutus__msg
+        .c-fBox__imgArea
+          width: 22%
+          margin: 0
+          img
+            width: 100%
+        .c-fBox__textArea
+          width: 78%
+          padding-left: 2em
+          p
+            margin-top: 3rem
+
+      &.aboutus__vc
+        .c-fBox__imgArea
+          width: 35%
+          margin: 0
+          img
+            width: 100%
+        .c-fBox__textArea
+          h4
+            margin: 3rem 0
+            font-size: 2.2rem
+            font-weight: 400
+            line-height: 1.2
+          width: 65%
+          padding-right: 2em
+
+      &.aboutus__outline
+        table
+          tbody
+            td
+              span
+                margin-right: 1em
+              a
+                cursor: pointer
+                color: palette('site','skyblue')
+
+      &.aboutus__map
+        padding-top: 0
+        .p-chapter__inner
+          height: 400px
+          *
+            max-height: none
+
+@media(max-width: $width-pc)
+  .aboutus
+    .p-body
+      .p-chapter
+        &.aboutus__map
+          .p-chapter__inner
+            >div:first-child
+              left: 10px!important
+              width: calc(100% - 20px)!important
+              overflow: hidden
+
+@media(max-width: $width-sp)
+  .aboutus
+    .p-catch
+      &__mainImgArea
+        .main__catch,.main__bg
+          display: block
+
+    .p-body
+      .p-chapter
+        // padding: 3rem 0
+        &.aboutus__msg
+          .c-fBox
+            display: inherit
+            &__imgArea
+              width: 80%
+              margin: 0 auto
+            &__textArea
+              width: 100%
+              padding: 0
+
+        &.aboutus__vc
+          .c-fBox
+            display: inherit
+            &__imgArea
+              width: 80%
+              margin: 0 auto
+            &__textArea
+              width: 100%
+              padding: 0
+
+        &.aboutus__outline
+          table
+            tbody
+              td
+                span
+                  display: block
+                  margin-right: 0

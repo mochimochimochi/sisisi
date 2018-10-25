@@ -1,0 +1,61 @@
+// linkbtn
+.c-linkBtn
+  display: inline-block
+  color: palette('basic','text')
+  background: palette('basic','white')
+  border: 1px solid palette('basic','text')
+  &:hover
+    color: palette('basic','text')
+    background: palette('basic','gray')
+
+// linkBtn blue
+.c-linkBtn__bl
+  @extend .c-linkBtn
+  border: 1px solid palette('site','skyblue')
+  color: palette('basic','white')
+  background: palette('site','skyblue')
+  &:hover
+    color: palette('site','skyblue')
+    background: palette('basic','white')
+
+// linkbtn with Icon
+.c-linkBtn__icon
+  @extend .c-linkBtn
+  border: 1px solid palette('site','skyblue')
+  color: palette('basic','white')
+  background: palette('site','skyblue')
+  border-radius: 5px
+  &::before
+    +icon
+    margin-right: 10px
+    vertical-align: middle
+    transform: translateY(-10%)
+    font-size: 0.9em
+  &::after
+    +icon
+    margin-left: 10px
+    vertical-align: middle
+    transform: translateY(-10%)
+    font-size: 0.9em
+
+  &:hover
+    color: palette('site','skyblue')
+    background: palette('basic','white')
+
+.c-linkBtn__icon--red
+  @extend .c-linkBtn__icon
+  border-color: palette('site','red')
+  background: palette('site','red')
+  &:hover
+    color: palette('site','red')
+    background: palette('basic','white')
+
+// icon
+.c-linkBtn__icon
+  &.icon__arwR
+    &::before
+      content: '\EA0A'
+
+  &.icon__arwR2
+    &::after
+      content: '\EA07'

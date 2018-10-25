@@ -1,0 +1,118 @@
+// 各ページ毎のスタイル
+
+// news詳細ページ
+.news.article
+  .p-body
+    .p-chapter
+      &.newsArticle
+        .p-chapter__inner
+
+          .news__titleArea
+            +resetMP
+            position: relative
+            display: flex
+            flex-wrap: wrap
+            justify-content: flex-start
+            align-items: center
+            width: 100%
+            height: 100%
+            padding: 1em 0
+            margin-bottom: 4rem
+            font-size: 1.4rem
+            font-weight: 400
+            border-bottom: 3px solid palette('site','skyblue')
+
+            .news__cate
+              display: flex
+              justify-content: center
+              align-items: center
+              width: 120px
+              height: 28px
+              color: palette('basic','white')
+              font-family: $oswald
+              font-size: 1.6rem
+              text-align: center
+              line-height: 1
+              &.news
+                background: palette('site','cateN')
+              &.event
+                background: palette('site','cateE')
+
+            .news__date
+              width: 100px
+              text-align: center
+
+            .news__title
+              width: 100%
+              margin-top: 1rem
+              font-size: 2.4rem
+              line-height: 1.4
+
+          .news__bodyArea
+            padding: 0 1em
+
+            p
+              font-size: 1.4rem
+              line-height: 1.6
+
+            a
+              color: palette('anchor','base')
+              text-decoration: underline
+              &:hover
+                text-decoration: none
+
+            .c-title__box
+              margin-top: 7rem
+
+            .c-cBox__gray
+              margin-top: 4rem
+
+            .u-small
+              font-size: 1.3rem
+
+            .overImg
+              width: 100%
+              // overflow: auto
+              // -webkit-overflow-scrolling : touch
+              img
+                width: 100%
+                // min-width: 700px
+
+@media(max-width: $width-pc)
+  .news.article
+    .p-lead
+      .breadcrumb
+        padding: 0
+
+// @media(max-width: 760px)
+//   .news.article
+//     .p-body
+//       .p-chapter
+//         &.newsArticle
+//           .p-chapter__inner
+//             .news__bodyArea
+//               .overImg
+//                 overflow: auto
+//                 -webkit-overflow-scrolling : touch
+
+@media(max-width: $width-sp)
+  .news.article
+    .p-catch
+      .p-catch__mainImgArea
+        .main__catch,.main__bg
+          display: block
+
+    .p-body
+      .p-chapter
+        &__inner
+          .c-fBox
+            flex-wrap: wrap
+            .c-fBox__textArea
+              width: 100%
+            .c-fBox__imgArea
+              width: 100%
+      .p-chapter
+        &.newsArticle
+          .p-chapter__inner
+            .news__bodyArea
+              padding: 0

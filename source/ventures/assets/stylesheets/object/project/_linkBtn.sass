@@ -1,0 +1,18 @@
+// linkBtn
+.p-linkBtn
+  @extend .c-linkBtn__bl
+  display: block
+  padding: 0.5em 1em
+  font-family: $oswald
+  font-size: 1.8rem
+  line-height: 1
+  text-align: center
+  border-radius: 20px
+
+.p-linkBtn--rev
+  @extend .p-linkBtn
+  color: palette('site','skyblue')
+  background: palette('basic','white')
+  &:hover
+    color: palette('basic','white')
+    background: palette('site','skyblue')

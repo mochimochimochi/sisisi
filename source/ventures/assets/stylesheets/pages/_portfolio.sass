@@ -1,0 +1,222 @@
+// 各ページ毎のスタイル
+
+// portfolio
+.portfolio
+  .p-catch
+    &__mainImgArea
+      position: relative
+      min-height: 150px
+      img.main__bg
+        width: 100%
+        min-height: 150px
+
+      .main__catch
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        z-index: 5000
+        margin: auto
+        width: 12.6%
+        min-width: 112px
+
+  .p-body
+    .p-chapter
+      padding: 6rem 0
+      &:first-of-type
+        padding-top: 0
+      .portfolio__chapter__title
+        margin-top: 0
+        font-size: 3.6rem
+        font-weight: 400
+        text-align: center
+        span
+          display: block
+          font-family: $sansserifFont
+          font-size: 2rem
+
+      &.portfolio__01
+        .portfolio__01
+          &__mainImg
+            width: 100%
+            margin: 6rem auto 2rem auto
+            img
+              width: 100%
+          &__contentsList
+            +resetMP
+            list-style: none
+            width: 100%
+            display: flex
+            justify-content: space-between
+            margin-bottom: 5rem
+            li
+              width: 24%
+              padding: 1rem
+              color: palette('basic','white')
+              background: palette('site','skyblue')
+              font-family: $oswald
+              font-size: 2.6rem
+              text-align: center
+              img
+                width: 100%
+
+        .c-title__bold
+          margin: 5rem 0 3rem 0
+          text-align: center
+
+        .c-fBox
+          &__textArea
+            width: 32%
+            border: 1px solid palette('site','borderG')
+            margin: 0
+            padding: 2rem
+            font-size: 1.6rem
+            dt
+              font-weight: 700
+              margin-bottom: .5em
+              text-align: center
+            dd
+              +resetM
+
+      &.portfolio__02 ,&.portfolio__03
+        .portfolio__02, .portfolio__03
+          &__linkList
+            +resetMP
+            list-style: none
+            display: flex
+            justify-content: flex-start
+            flex-wrap: wrap
+            width: 100%
+            max-width: $width-mx
+            padding: 0 4rem
+            margin: 0 auto
+            li
+              width: 24%
+              margin-bottom: 2rem
+              &:not(:nth-child(4n))
+                margin-right: calc(4% / 3)
+              a
+                display: block
+                width: 100%
+                height: 100%
+                border: 1px solid palette('basic','white')
+                &:hover
+                  border-color: palette('site','skyblue')
+                &.u-noLink
+                  opacity: 1
+                img
+                  display: block
+                  width: 100%
+                // for IE11
+                _:-ms-lang(x), img
+                  display: inline-block
+              &.linkList__btnArea
+                display: flex
+                justify-content: center
+                align-items: center
+                background: transparent
+                .p-linkBtn
+                  width: 80%
+                  height: 4rem
+        .portfolio__03
+          &__linkList
+            li
+              a
+                border: 1px solid palette('site','borderG')
+
+@media(max-width: $width-mx)
+  .portfolio
+    .p-body
+      .p-chapter
+        &.portfolio__02, &.portfolio__03
+          .portfolio__02, .portfolio__03
+            &__linkList
+              padding: 0 2rem
+
+  @media(max-width: $width-pc)
+    .portfolio
+      .l-header
+        background: palette('basic','white')
+
+      .p-body
+        .p-chapter
+          &.portfolio__01
+            .portfolio__01
+              &__contentsList
+                li
+                  font-size: 2rem
+                  @media(max-width: 720px)
+                    font-size: 1.6rem
+
+          &.portfolio__02, &.portfolio__03
+            .portfolio__02, .portfolio__03
+              &__linkList
+                padding: 0 1rem
+
+
+@media(max-width: 600px)
+  .portfolio
+    .p-body
+      .p-chapter
+        &.portfolio__01
+          .portfolio__01
+            &__mainImg
+              width: 100%
+            &__contentsList
+              flex-wrap: wrap
+              li
+                width: 48%
+                font-size: 1.8rem
+                margin-bottom: 2rem
+
+          .c-fBox
+            flex-wrap: wrap
+            &__textArea
+              width: 100%
+              margin-bottom: 1em
+
+        &.portfolio__02, &.portfolio__03
+          .portfolio__02, .portfolio__03
+            &__linkList
+              li
+                width: 48%
+                &:not(:nth-child(4n))
+                  margin-right: 0
+                &:not(:nth-child(2n))
+                  margin-right: 4%
+                &.linkList__btnArea
+                  width: 100%
+                  margin-top: 1rem
+
+@media(max-width: $width-sp)
+  .portfolio
+    .p-catch
+      &__mainImgArea
+        .main__catch,.main__bg
+          display: block
+
+    .p-body
+      .p-chapter
+        .portfolio__chapter__title
+          margin-bottom: 3rem
+          font-size: 3.6rem
+          span
+            font-size: 1.6rem
+        &.portfolio__01
+          .portfolio__01
+            &__mainImg
+              margin: 4rem auto 0rem auto
+
+
+  @media(max-width: $width-sp2)
+    .portfolio
+      .p-body
+        .p-chapter
+          &.portfolio__01
+            .portfolio__01
+              &__contentsList
+                flex-wrap: wrap
+                li
+                  margin-bottom: 1rem
+                  font-size: 1.6rem

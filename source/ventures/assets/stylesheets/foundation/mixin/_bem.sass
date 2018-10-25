@@ -1,0 +1,9 @@
+//Element用のミックスイン  親要素のクラス名を継承してデリミターとして"__"を付与
+=e($name)
+    @at-root &__#{$name}
+        @content
+
+//Modifier用のミックスイン  親要素のクラス名を継承してデリミターとして"--"を付与
+=m($name)
+    @at-root &--#{$name}
+        @content

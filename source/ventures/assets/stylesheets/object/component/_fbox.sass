@@ -1,0 +1,42 @@
+// flex_box
+
+.c-fBox
+  display: flex
+  .c-fBox__textArea
+  .c-fBox__imgArea
+    img
+      width: 100%
+      height: auto
+  &.row
+    flex-direction: row
+  &.row__r
+    flex-direction: row-reverse
+  &.clm
+    flex-direction: column
+  &.clm__r
+    flex-direction: column-reverse
+
+  &.jc__sb
+    justify-content: space-between
+  &.jc__sa
+    justify-content: space-around
+  &.jc__fs
+    justify-content: flex-start
+  &.jc__fe
+    justify-content: flex-end
+  &.jc__ce
+    justify-content: center
+
+  &.ai__ce
+    align-items: center
+  &.ai__fs
+    align-items: flex-start
+  &.ai__fe
+    align-items: flex-end
+  &.ai__st
+    align-items: stretch
+  &.ai__bl
+    align-items: baseline
+
+  &.fwrap
+    flex-wrap: wrap

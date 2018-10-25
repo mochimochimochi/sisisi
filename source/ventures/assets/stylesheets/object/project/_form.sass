@@ -1,0 +1,238 @@
+// フォーム
+
+.p-form__require
+  display: inline-block
+  padding: 4px
+  margin-bottom: 5px
+  color: palette('basic','white')
+  background: palette('site','red')
+  font-size: 1rem
+  vertical-align: middle
+
+
+.p-form
+  padding: 3rem
+  border: 1px solid palette('site','borderG')
+  font-size: 1.6rem
+
+  // for android and chrome
+  *
+    max-height: 100%
+
+  a
+    text-decoration: underline
+    &:hover
+      color: palette('site','red')
+
+  .formItem
+    display: flex
+    align-items: flex-start
+    width: 100%
+    margin-bottom: 6rem
+
+    .item__title
+      width: calc(30% - 38px)
+      span
+        display: block
+        font-size: 1.2rem
+
+    .p-form__require
+      width: 28px
+      height: 19px
+      margin-right: 1rem
+
+    .item__input
+      width: 70%
+      label
+        display: inline-block
+        margin: 0 0.5em 1em 0
+        white-space: nowrap
+        input[type="text"]
+          margin-left: 0.5em
+        input[type="radio"],input[type="checkbox"]
+          margin-right: 0.5em
+      >span
+        display: block
+        label
+          margin: 0 0.5em 0 0
+
+      &__title
+        display: block
+        font-weight: 700
+        &:not(:first-of-type)
+          margin-top: 1em
+
+    input[type="text"]
+      max-width: 100%
+      padding: 5px
+      border: 1px solid palette('site','borderG')
+      &.error
+        background: lighten(palette('site','red'),44%)
+        border-color: palette('site','red')
+
+    .error__text
+      display: block
+      color: palette('site','red')
+
+    input[type="radio"]
+      margin-right: 0.5em
+      &.error
+        position: relative
+        &::before
+          position: absolute
+          top: -10%
+          left: 0
+          content: ''
+          display: block
+          width: 3em
+          height: 130%
+          border: 2px solid palette('site','red')
+      &.error + label
+        color: palette('site','red')
+
+    textarea
+      border: 1px solid palette('site','borderG')
+
+    select
+      width: 50%
+      height: 32px
+      padding: 5px
+      margin-bottom: 1em
+      border-radius: 0
+      &.error
+        background: lighten(palette('site','red'),44%)
+        border-color: palette('site','red')
+
+    .info
+      display: block
+      margin: 0.5em 0
+      font-size: 1.2rem
+
+    &.name,&.name__kana
+      input[type="text"]
+        width: 50%
+
+    &.mail01,&.mail02
+      input[type="text"]
+        width: 50%
+
+    &.address
+      .item__input
+        >span
+          display: block
+          margin-bottom: 2em
+          label
+            display: block
+      input[type="text"]
+        width: 50%
+
+    &.age
+      input[type="text"]
+        width: 50px
+        margin-right: 0.5em
+
+    &.family
+      .item__input
+        label
+          margin-bottom: 0
+        label:last-of-type
+          margin-left: 2em
+        input[type="text"]
+          width: 50px
+          margin-right: 0
+
+    &.inquiry
+      textarea
+        width: 100%
+
+    &.bday
+      select
+        width: auto
+
+    &.date
+      select
+        width: auto
+
+    &.people
+      input[type="text"]
+        width: 50px
+        margin-right: 0.5em
+
+  .btnArea
+    width: 100%
+    text-align: center
+    &__privacy
+      display: block
+      margin-bottom: 2rem
+      a
+        &:hover
+          text-decoration: underline
+    button
+      width: 298px
+      max-width: 100%
+      height: 60px
+      &:hover
+        background: lighten(palette('basic','text'),15%)
+        border-color: lighten(palette('basic','text'),15%)
+    button.revise
+      background: lighten(palette('basic','text'),40%)
+      border-color: lighten(palette('basic','text'),40%)
+      &:hover
+        background: lighten(palette('basic','text'),55%)
+        border-color: lighten(palette('basic','text'),55%)
+
+
+@media(max-width: $width-pc)
+  .p-form
+    .formItem
+      &.address
+        input:not(#add_zip)
+          width: 90%
+
+
+@media(max-width: $width-tb)
+  .p-form
+    .formItem
+      margin-bottom: 4rem
+
+@media(max-width: 760px)
+  .p-form
+    padding: 3rem 1rem
+    .formItem
+      display: inherit
+      margin-bottom: 3rem
+
+      .item__title
+        width: 100%
+        font-weight: 700
+        span
+          display: inline-block
+
+      .item__input
+        display: block
+        width: 100%
+      input[type="text"]
+        width: 100%
+      &.address
+        input:not(#add_zip)
+          width: 100%
+
+    .btnArea
+      button
+        display: block
+        width: 100%
+        padding: 1em 2em
+        margin: 0
+
+        &:not(:last-of-type)
+          margin-bottom: 3rem
+
+@media(max-width: $width-sp)
+  .p-form
+    .formItem
+      &.mail01,&.mail02,&.name,&.name__kana
+        input[type="text"]
+          width: 100%
+      &.address
+        input[type="text"]:not(#add_zip)
+          width: 100%

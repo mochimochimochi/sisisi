@@ -1,0 +1,83 @@
+// 各ページ毎のスタイル
+
+// underconstruction
+.underconstruction
+  .p-catch
+    &__mainImgArea
+      position: relative
+      min-height: 150px
+      img.main__bg
+        width: 100%
+        min-height: 150px
+
+      .main__catch
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        z-index: 5000
+        margin: auto
+        width: 24%
+        min-width: 346px
+
+  .p-body
+    .p-chapter
+      padding: 0
+      .p-chapter__inner
+        h3
+          font-size: 2.2rem
+          font-weight: 400
+          text-align: center
+
+        .p-linkBtn--rev
+          width: 200px
+          margin: 0 auto
+
+
+@media(max-width: $width-pc)
+  .underconstruction
+    .p-catch
+      &__mainImgArea
+        position: relative
+        overflow: hidden
+        img.main__bg
+          position: absolute
+          top: 0
+          right: 0
+          bottom: 0
+          left: 0
+          margin: auto
+          z-index: 1
+          width: auto
+          transform: translateX(-15%)
+
+@media(max-width: 600px)
+  .underconstruction
+    .p-body
+      .p-chapter
+        padding: 0
+        .p-chapter__inner
+          .p-linkBtn--rev
+            width: 80%
+
+@media(max-width: $width-sp)
+  .underconstruction
+    .p-catch
+      .p-catch__mainImgArea
+        .main__catch,.main__bg
+          display: block
+        .main__catch
+          width: 70%
+          min-width: inherit
+
+    //
+    // .p-body
+    //   .p-chapter
+    //     &__inner
+    //       .c-fBox
+    //         flex-wrap: wrap
+    //         .c-fBox__textArea
+    //           width: 100%
+    //         .c-fBox__imgArea
+    //           width: 100%

@@ -1,0 +1,472 @@
+// 各ページ毎のスタイル
+
+// home
+.home
+
+  .l-header
+    // background: rgba(palette('basic','white'),0.7)
+
+  .p-catch
+    &__mainImgArea
+      height: 540px
+      position: relative
+      overflow: hidden
+      background-image: url('/ventures/assets/img/home/home_main_bg.jpg')
+      background-repeat: no-repeat
+      // background-size: auto 100%
+      background-size: cover
+      background-position: center center
+      background-attachment: fixed
+      img
+        width: 100%
+
+      .main__catchArea
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        margin: auto
+        width: 52%
+        height: 16%
+        .main__catch01
+          opacity: 0
+          width: 100%
+          margin-bottom: 3%
+          &.is-active
+            @extend .animated
+            @extend .fadeInLeft
+            animation-duration: 1.5s
+
+        .main__catch01sp
+          display: none
+          &.is-active
+            @extend .animated
+            @extend .fadeInLeft
+            animation-duration: 1.5s
+
+        .main__catch02
+          opacity: 0
+          width: 80%
+          margin: 0 auto
+          &.is-active
+            @extend .animated
+            @extend .fadeInRight
+            animation-duration: 1.5s
+            animation-delay: 0.8s
+
+      .main__bg,.main__bg__sp
+        display: none
+
+  .p-lead.home__news
+    border-bottom: 1px solid palette('site','borderG')
+    .p-lead__inner
+      display: flex
+      flex-flow: row wrap
+      justify-content: space-between
+      align-items: flex-end
+      padding: 5rem 0
+
+    .home__news__title
+      margin: 0
+      font-family: $oswald
+      font-size: 5rem
+      font-weight: 400
+      line-height: 1
+
+    .home__news__more
+      margin: 0
+      a
+        font-family: $oswald
+        font-size: 1.8rem
+        line-height: 1
+        &::before
+          +icon
+          content: '\EA07'
+          margin-right: 1rem
+          font-size: 1.2rem
+          vertical-align: baseline
+
+    .newsList
+      +resetMP
+      list-style: none
+      width: 100%
+      margin-top: 2rem
+      li
+        border-width: 1px 1px 0 1px
+        border-color: palette('site','borderG')
+        border-style: solid
+        &:last-of-type
+          border-bottom-width: 1px
+        a
+          position: relative
+          display: flex
+          justify-content: flex-start
+          align-items: center
+          width: 100%
+          height: 100%
+          padding: 1em 2em 1em 1em
+          font-size: 1.4rem
+          &::after
+            +icon
+            content: '\EA07'
+            margin-left: 1em
+            font-size: 1.2rem
+          &:hover
+            background: palette('site','bgGray')
+
+          .news__cate
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 120px
+            height: 28px
+            color: palette('basic','white')
+            font-family: $oswald
+            font-size: 1.6rem
+            text-align: center
+            line-height: 1
+            &.news
+              background: palette('site','cateN')
+            &.event
+              background: palette('site','cateE')
+
+          .news__date
+            width: 120px
+            text-align: center
+
+          .news__title
+            width: calc(100% - 240px)
+
+  .p-body
+    .p-chapter
+      padding: 5rem 0
+      &__inner
+        h3,figure
+          +resetMP
+
+      .home__chapter__title
+        margin: 0 0 4rem 0
+        text-align: center
+        font-family: $oswald
+        font-size: 5rem
+        font-weight: 400
+        span
+          display: block
+          font-family: $sansserifFont
+          font-size: 2rem
+
+      &.home__inv
+        background-image: url('/ventures/assets/img/home/home_inv_bg.png')
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center center
+        .home__inv
+          &__mainImg
+            width: 65%
+            margin: 0 auto 2rem auto
+            img
+              width: 100%
+          &__btnArea
+            width: 40%
+            margin: 2rem auto
+            .p-linkBtn
+              height: 3em
+              border-radius: 30px
+              padding: .9em 1em
+          &__contentsList
+            +resetMP
+            list-style: none
+            width: 100%
+            display: flex
+            justify-content: space-between
+            li
+              width: 24%
+              padding: 1rem
+              color: palette('basic','white')
+              background: palette('site','skyblue')
+              font-family: $oswald
+              font-size: 2.6rem
+              text-align: center
+              img
+                width: 100%
+
+      &.home__ptf
+        background-image: url('/ventures/assets/img/home/home_ptf_bg.jpg')
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center center
+        background-attachment: fixed
+        .home__chapter__title
+          color: palette('basic','white')
+        .home__ptf
+          &__linkList
+            +resetMP
+            list-style: none
+            display: flex
+            justify-content: flex-start
+            flex-wrap: wrap
+            width: 100%
+            max-width: $width-mx
+            padding: 0 4rem
+            margin: 0 auto
+            li
+              width: 24%
+              margin-bottom: 2rem
+              &:not(:nth-child(4n))
+                margin-right: calc(4% / 3)
+              a
+                display: block
+                width: 100%
+                height: 100%
+                border: 1px solid palette('basic','white')
+                &:hover
+                  border-color: palette('site','skyblue')
+                &.u-noLink
+                  opacity: 1
+                img
+                  display: block
+                  width: 100%
+                // for IE11
+                _:-ms-lang(x), img
+                  display: inline-block
+              &.linkList__btnArea
+                display: flex
+                justify-content: center
+                align-items: center
+                background: transparent
+                .p-linkBtn
+                  width: 80%
+                  height: 4rem
+                  border-color: palette('site','skyblue')
+
+      &.home__team
+        .home__team
+          &__mainImg
+            width: 78%
+            margin: 0 auto 3.6rem auto
+            img
+              width: 100%
+
+          &__textArea
+
+          &__btnArea
+            padding-top: 3rem
+            .p-linkBtn
+              width: 200px
+              height: 4rem
+              margin: 0 auto
+
+      &.home__inc
+        position: relative
+        padding: 7rem 0 5rem 0
+        background-image: url('/ventures/assets/img/home/home_inc_bg.jpg')
+        background-repeat: no-repeat
+        background-position: center center
+        background-size: cover
+
+        .p-chapter__inner
+          display: flex
+          justify-content: space-between
+          margin: auto
+
+          .home__inc__imgArea
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 50%
+            height: auto
+            background: #89c5eb
+            img
+              display: block
+              width: 80%
+              margin: 0 auto
+
+
+          .home__inc__textArea
+            width: 50%
+            padding: 4rem
+            background: palette('basic','white')
+
+            p
+              line-height: 2
+
+            .p-linkBtn
+              width: 200px
+              margin: 3rem auto 0 auto
+
+
+@media(max-width: $width-mx)
+  .home
+    .p-body
+      .p-chapter
+        &.home__ptf
+          .home__ptf
+            &__linkList
+              padding: 0 2rem
+
+
+  @media(max-width: $width-pc)
+    .home
+      .l-header
+        position: fixed
+        background: palette('basic','white')
+
+      .p-body
+        .p-chapter
+          &.home__inv
+            .home__inv
+              &__contentsList
+                li
+                  font-size: 2rem
+                  @media(max-width: 720px)
+                    font-size: 1.6rem
+
+          &.home__ptf
+            .home__ptf
+              &__linkList
+                padding: 0 1rem
+
+          &.home__inc
+            padding: 7rem 2rem 5rem 2rem
+
+@media(max-width: 800px)
+  .home
+    .p-catch
+      &__mainImgArea
+        height: auto
+        .main__bg
+          display: block
+
+    .p-body
+      .p-chapter
+        &.home__ptf
+          background-attachment: inherit
+
+@media(max-width: 600px)
+  .home
+    .p-body
+      .p-chapter
+        &.home__inv
+          .home__inv
+            &__mainImg
+              width: 100%
+            &__contentsList
+              flex-wrap: wrap
+              li
+                width: 48%
+                font-size: 1.8rem
+                margin-bottom: 2rem
+
+        &.home__ptf
+          .home__ptf
+            &__linkList
+              li
+                width: 48%
+                &:not(:nth-child(4n))
+                  margin-right: 0
+                &:not(:nth-child(2n))
+                  margin-right: 4%
+                &:nth-of-type(6) + li
+                 display: none
+                &.linkList__btnArea
+                  width: 100%
+                  margin-top: 1rem
+
+        &.home__team
+          .home__team
+            &__mainImg
+              width: 100%
+
+            &__btnArea
+              .p-linkBtn
+                width: 80%
+
+        &.home__inc
+          background: palette('site',(bgGray))
+          padding: 4rem 1rem
+          .p-chapter__inner
+            display: inherit
+            padding: 0
+            .home__inc__imgArea
+              width: 100%
+            .home__inc__textArea
+              width: 100%
+
+              .p-linkBtn
+                width: 80%
+
+@media(max-width: $width-sp)
+  .home
+    .p-catch
+      .p-catch__mainImgArea
+        .main__catchArea
+          width: 74%
+          height: 36%
+          .main__catch01
+            display: none
+          .main__catch01sp
+            opacity: 0
+            display: block
+            width: 76%
+            margin: 0 auto 4% auto
+          .main__catch02
+            width: 100%
+        .main__bg
+          display: none
+
+
+    .p-lead.home__news
+      .p-lead__inner
+        .home__news__title
+          width: 100%
+          font-size: 3.6rem
+          text-align: center
+
+        .home__news__more
+          order: 3
+          width: 100%
+          text-align: right
+
+        .newsList
+          margin-bottom: 1rem
+          li
+            a
+              flex-wrap: wrap
+              &::after
+                display: none
+
+              .news__date
+                width: 100px
+
+              .news__title
+                width: 100%
+                margin-top: 1rem
+
+    .p-body
+      .p-chapter
+        .home__chapter__title
+          margin-bottom: 3rem
+          font-size: 3.6rem
+          span
+            font-size: 1.6rem
+        &.home__inv
+            .home__inv
+              &__btnArea
+                width: 80%
+                .p-linkBtn
+                  height: auto
+                  padding: .5em 1em
+
+
+  @media(max-width: $width-sp2)
+    .home
+      .p-body
+        .p-chapter
+          &.home__inv
+            .home__inv
+              &__contentsList
+                flex-wrap: wrap
+                li
+                  margin-bottom: 1rem
+                  font-size: 1.6rem

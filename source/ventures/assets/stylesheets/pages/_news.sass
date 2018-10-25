@@ -1,0 +1,124 @@
+// 各ページ毎のスタイル
+
+// news
+.news
+  .p-catch
+    &__mainImgArea
+      position: relative
+      min-height: 150px
+      img.main__bg
+        width: 100%
+        min-height: 150px
+
+      .main__catch
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        z-index: 5000
+        margin: auto
+        width: 18%
+        min-width: 180px
+
+  .p-body
+    .p-chapter
+      padding: 0
+      &.newsListArea
+        .p-chapter__inner
+          .newsList__year
+            padding-left: 0.5em
+            margin: 1em 0 .5em 0
+            font-size: 2rem
+            font-weight: 400
+            &:first-of-type
+              margin-top: 0
+
+          .newsList
+            +resetMP
+            list-style: none
+            width: 100%
+            li
+              border-width: 1px 1px 0 1px
+              border-color: palette('site','borderG')
+              border-style: solid
+              &:last-of-type
+                border-bottom-width: 1px
+              a
+                position: relative
+                display: flex
+                flex-wrap: wrap
+                justify-content: flex-start
+                align-items: center
+                width: 100%
+                height: 100%
+                padding: 1em 2em 1em 1em
+                font-size: 1.4rem
+                &:hover
+                  background: palette('site','bgGray')
+                &::after
+                  position: absolute
+                  top: calc(50% - 8px)
+                  right: 10px
+
+                .news__cate
+                  display: flex
+                  justify-content: center
+                  align-items: center
+                  width: 120px
+                  height: 28px
+                  color: palette('basic','white')
+                  font-family: $oswald
+                  font-size: 1.6rem
+                  text-align: center
+                  line-height: 1
+                  &.news
+                    background: palette('site','cateN')
+                  &.event
+                    background: palette('site','cateE')
+
+                .news__date
+                  width: 100px
+                  text-align: center
+
+                .news__title
+                  width: 100%
+                  margin-top: 1rem
+
+
+@media(max-width: $width-pc)
+  .news
+    .p-catch
+      &__mainImgArea
+        position: relative
+        overflow: hidden
+        img.main__bg
+          position: absolute
+          top: 0
+          right: 0
+          bottom: 0
+          left: 0
+          margin: auto
+          z-index: 1
+          width: auto
+          transform: translateX(-15%)
+
+
+
+@media(max-width: $width-sp)
+  .news
+    .p-catch
+      .p-catch__mainImgArea
+        .main__catch,.main__bg
+          display: block
+
+
+    .p-body
+      .p-chapter
+        &__inner
+          .c-fBox
+            flex-wrap: wrap
+            .c-fBox__textArea
+              width: 100%
+            .c-fBox__imgArea
+              width: 100%

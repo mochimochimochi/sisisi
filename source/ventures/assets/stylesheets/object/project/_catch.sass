@@ -1,0 +1,34 @@
+/* catch */
+
+.p-catch
+  width: 100%
+
+  .p-catch__mainImgArea
+    width: 100%
+    margin: 0 auto
+    h2
+      margin: 0
+    img
+      display: block
+      width: 100%
+
+    .main__catch__sp,.main__bg__sp
+      display: none
+
+  &__inner
+    width: 100%
+    max-width: $width-pc
+    margin: 0 auto
+
+@media(max-width: $width-pc)
+  .p-catch__inner
+    padding-right: 10px
+    padding-left: 10px
+
+@media(max-width: $width-sp)
+  .p-catch
+    .p-catch__mainImgArea
+      .main__catch,.main__bg
+        display: none
+      .main__catch__sp,.main__bg__sp
+        display: block

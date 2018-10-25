@@ -1,0 +1,95 @@
+// 各ページ毎のスタイル
+
+// 個人情報の取り扱い・当サイトのご利用にあたってページ
+.legal
+  .p-catch
+    &__mainImgArea
+      position: relative
+      min-height: 150px
+      img.main__bg
+        width: 100%
+        min-height: 150px
+
+      .main__catch
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        z-index: 5000
+        margin: auto
+        width: 18%
+        min-width: 258px
+
+  .p-lead
+    padding: 2rem 0 .5rem
+
+  .p-body
+    padding: 0
+    .p-chapter
+      padding: 0 0 8rem
+      &.legalArea
+        .p-chapter__inner
+          .p-chapter__lead
+            margin-bottom: 5rem
+          .legalList
+            font-size: 1.4rem
+            margin-bottom: 5rem
+            .legal__titleArea
+              .legal__title
+                width: 100%
+                margin: 1rem 0
+                font-size: 2.2rem
+                font-weight: 400
+                line-height: 1.4
+          p
+            font-size: 1.4rem
+            line-height: 1.6
+          ol,ul
+            +resetP
+            padding-left: 2rem
+            li
+              ol
+                margin-bottom: 1rem
+                &.alpha
+                  li
+                    list-style-type: lower-alpha
+                &.roman
+                  li
+                    list-style-type: lower-roman
+              ul
+                &.disc
+                  li
+                    list-style-type: disc
+
+
+
+@media(max-width: $width-pc)
+  .legal
+    .p-catch
+      &__mainImgArea
+        position: relative
+        overflow: hidden
+        img.main__bg
+          position: absolute
+          top: 0
+          right: 0
+          bottom: 0
+          left: 0
+          margin: auto
+          z-index: 1
+          width: auto
+          transform: translateX(-15%)
+
+
+
+@media(max-width: $width-sp)
+  .legal
+    .p-catch
+      .p-catch__mainImgArea
+        .main__catch,.main__bg
+          display: block
+    .p-catch
+      .p-catch__mainImgArea
+        .main__catch,.main__bg
+          display: block

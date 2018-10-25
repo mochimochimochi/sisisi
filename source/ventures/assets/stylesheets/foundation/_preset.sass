@@ -1,0 +1,41 @@
+/*  preset */
+
+
+*,*::after,*::before
+  box-sizing: border-box
+
+html
+  width: 100%
+  height: 100%
+  +resetMP
+  // 1rem = 10pxに
+  font-size: 62.5%
+
+body
+  width: 100%
+  +resetMP
+  font-family: $sansserifFont
+  line-height: $lineHeight
+  color: palette('basic','text')
+
+a
+  cursor: pointer
+  text-decoration: none
+  // outline: none
+  color: palette('basic','text')
+  transition: all 0.3s ease
+  &:hover
+    color: palette('site','skyblue')
+
+img
+  vertical-align : bottom
+
+i, cite, em, var, address, dfn
+  font-style: normal
+
+p
+  font-size: 1.6rem
+  line-height: 1.4
+
+iframe
+  border: none

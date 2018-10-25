@@ -1,0 +1,108 @@
+// chapter
+
+.p-chapter
+  width: 100%
+  padding: 8rem 0
+  &__inner
+    max-width: $width-pc
+    margin: 0 auto
+
+    // for android and chrome
+    *
+      max-height: 100%
+
+    .c-title__box
+      padding: 0 1em
+      background: palette('basic','white')
+      font-size: 20px
+      font-weight: 400
+
+    .c-title__ul
+      font-size: 18px
+      font-weight: 400
+      margin: 0 0 2rem 0
+
+    .c-cBox
+      padding: 2rem
+      margin: 2rem 0
+
+
+    .c-icon
+      padding: 1rem 2rem
+
+    .c-btn
+      padding: 0.5em 2em
+      margin: 1rem
+      color: palette('basic','white')
+      background: palette('basic','text')
+      font-size: 1.8rem
+      &:hover
+        color: palette('basic','white')
+        background: palette('site','red')
+        border-color: palette('site','red')
+
+    // .c-linkBtn
+    //   padding: 0.5em 2em
+    //   margin-bottom: 1rem
+    //   font-size: 1.8rem
+
+    .c-linkList
+      margin: 1em 0
+      li:not(:last-of-type)
+        margin-bottom: 1rem
+      a
+        display: inline-block
+        color: palette('site','blue')
+        font-size: 14px
+        &:hover
+          text-decoration: underline
+
+    table
+      width: 100%
+      border-collapse: collapse
+      font-size: 1.4rem
+      th,td
+        padding: 1em
+        border: 1px solid palette('site','borderG')
+      th
+        font-weight: 400
+        text-align: left
+      thead
+        th
+          background: palette('site','bgBlue')
+      tbody
+        th
+          background: palette('site','bgGray')
+
+.p-chapter__blue01
+  @extend .p-chapter
+  background: palette('site','bg')
+
+.p-chapter__blue02
+  @extend .p-chapter
+  background: palette('site','bgBlue')
+
+.p-chapter__gray
+  @extend .p-chapter
+  background: palette('site','bgGray')
+
+
+@media(max-width: $width-pc)
+  .p-chapter__inner
+    padding-right: 10px
+    padding-left: 10px
+
+@media(max-width: $width-sp)
+  .p-chapter
+    &__inner
+      .c-linkBtn
+        width: 100%
+
+      table
+        th,td
+          display: block
+
+      .c-tableArea
+        table
+          th,td
+            display: table-cell

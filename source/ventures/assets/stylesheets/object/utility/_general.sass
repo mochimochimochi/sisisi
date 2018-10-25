@@ -1,0 +1,69 @@
+/*  general */
+
+// no link
+.u-noLink
+  pointer-events: none
+  opacity: 0.5
+// hide
+.u-hide
+  display: none
+
+// clearfix
+.u-clearfix
+  &:after
+    clear: both
+    content: ""
+    display: block
+
+// float LEFT
+.u-left
+  float: left
+
+// float RIGHT
+.u-right
+  float: right
+
+//text-align LEFT
+.u-alignLeft
+  text-align: left
+
+//text-align CENTER
+.u-alignCenter
+  text-align: center
+
+//text-align RIGHT
+.u-alignRight
+  text-align: right
+
+//font-weight BOLD
+.u-weightBold
+  font-weight: 700
+
+// font small
+.u-small
+  font-size: 1.4rem
+
+.u-textBl
+  color: palette('site','blue')
+.u-textRd
+  color: palette('site','red')
+
+// forPc
+.u-forPc
+  @media(max-width: $width-sp)
+    display: none
+
+// forPc_Tb
+.u-forPc--tb
+  @media(max-width: $width-tb)
+    display: none
+// forTb
+.u-forTb
+  display: none
+  @media(max-width: $width-tb)
+    display: inherit
+// forSp
+.u-forSp
+  display: none
+  @media(max-width: $width-sp)
+    display: inherit

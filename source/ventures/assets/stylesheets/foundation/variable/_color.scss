@@ -1,0 +1,37 @@
+/* 色の変数定義 カラーパレット生成 */
+
+$palettes: (
+  'basic': (
+    'base' : #212121,
+    'text' : #333,
+    'textG': #666666,
+    'black': #000000,
+    'white': #ffffff,
+    'gray' : #eeeeee
+  ),
+  "site": (
+    "main": #0068b6,
+    "skyblue": #0b99d4,
+    "bg": #e6ebee,
+    "bgBlue": #c7e9f7,
+    "bgGray": #f1f0ee,
+    "red": #e81929,
+    "itembg": #f8f7f3,
+    "borderG": #c0c0c0,
+    "dotL": #c9c9c9,
+    "green": #339900,
+    "cateN": #2775cc,
+    "cateE": #3a9c58
+  ),
+  'anchor':(
+    'base'   : #0453b8,
+    'inverse': #900,
+    'hoverBl': #00aae9,
+    'hoverG' : #f7f7f7,
+    'current': #0068b7,
+  )
+);
+
+@function palette( $palette_name, $tone_name:'base' ) {
+    @return map-get(map-get($palettes,$palette_name),$tone_name)
+}

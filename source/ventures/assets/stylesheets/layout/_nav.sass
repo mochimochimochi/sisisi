@@ -1,0 +1,196 @@
+/*  nav */
+
+.l-nav
+  display: flex
+  justify-content: flex-end
+  // width,height指定は_header.sassで
+  padding-right: 1rem
+
+  .l-nav__inner
+    +resetMP
+    list-style: none
+    display: flex
+    justify-content: space-between
+    width: 70%
+    min-width: 500px
+    height: 100%
+    li
+      flex-grow: 1
+      width: auto
+      height: 100%
+      a
+        position: relative
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 100%
+        height: 100%
+        color: palette('basic','text')
+        font-size: 1.4rem
+        line-height: 1
+        text-align: center
+        &::after
+          position: absolute
+          bottom: 0
+          left: 0
+          width: 100%
+          height: 3px
+          content: ''
+          background: transparent
+          transition: all 0.3s ease
+        &:hover
+          &::after
+            background: palette('site','main')
+        &.is-current
+          &::after
+            background: palette('site','main')
+
+      >dl.acdMenu
+        +resetMP
+        height: 100%
+        >dt
+          height: 100%
+        >dd
+          display: none
+
+  .l-nav__btn
+    display: none
+
+@media(max-width: $width-pc)
+  .l-nav__layer
+    display: none
+    &.is-fixed
+      position: fixed
+      top: 0
+      left: 0
+      z-index: 1
+      width: 100vw
+      height: 100vh
+      background: palette('site','skyblue')
+
+  .l-nav
+    display: none
+    position: absolute
+    z-index: 5000
+    // width,height指定は_header.sassで
+    padding-right: 0
+    overflow-y: scroll
+    -webkit-overflow-scrolling : touch
+
+    .l-nav__inner
+      display: block
+      width: 100%
+      height: auto
+      min-width: inherit
+      padding: 0 0 7rem 0
+      li
+        width: 100%
+        height: 70px
+        background: palette('site','skyblue')
+        border-bottom: 1px solid #97d0e7
+        >a
+          justify-content: flex-start
+          padding: 1em
+          color: palette('basic','white')
+          font-size: 1.6rem
+          text-align: left
+          &::after
+            display: none
+          &::before
+            +icon
+            position: absolute
+            top: calc(50% - 8px)
+            right: 16px
+            content: '\EA0A'
+
+        >dl.acdMenu
+          +resetMP
+          height: 100%
+          >dt
+            position: relative
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            width: auto
+            height: 70px
+            padding: 0 0 0 1em
+            color: palette('basic','white')
+            font-size: 1.6rem
+            &::before
+              +icon
+              position: absolute
+              top: calc(50% - 8px)
+              right: 16px
+              content: '\EA01'
+            a
+              display: inline-block
+              width: auto
+              height: auto
+              color: palette('basic','white')
+              font-size: 1.6rem
+              text-align: left
+              &::after
+                display: none
+            &.is-open
+              &::before
+                content: '\EA04'
+
+          >dd
+            margin: 0
+            a
+              position: relative
+              display: block
+              padding: 1em
+              color: palette('basic','white')
+              font-size: 1.6rem
+              line-height: 1
+              text-align: left
+              &::after
+                display: none
+              &::before
+                +icon
+                content: '\EA07'
+                margin-right: 0.5em
+                font-size: 1.2rem
+                vertical-align: middle
+
+  .l-nav__btn
+    display: inherit
+    position: absolute
+    top: 20px
+    right: 14px
+    display: block
+    z-index: 9999
+    width: 36px
+    height: 27px
+    margin: 0
+    span
+      position: absolute
+      left: 0
+      display: inline-block
+      box-sizing: border-box
+      width: 100%
+      height: 3px
+      background: palette('site','skyblue')
+      transition: all .3s ease
+      &:nth-of-type(1)
+        top: 0
+      &:nth-of-type(2)
+        top: 12px
+      &:nth-of-type(3)
+        bottom: 0
+
+    &.is-trigger
+      z-index: 9300
+      span
+        &:nth-of-type(1)
+          -webkit-transform: translateY(12px) rotate(-45deg)
+          transform: translateY(12px) rotate(-45deg)
+        &:nth-of-type(2)
+          left: 50%
+          opacity: 0
+          -webkit-animation: active-menu-bar02 .8s forwards
+          animation: active-menu-bar02 .8s forwards
+        &:nth-of-type(3)
+          -webkit-transform: translateY(-12px) rotate(45deg)
+          transform: translateY(-12px) rotate(45deg)
