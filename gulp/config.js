@@ -1,7 +1,7 @@
 //anyDir
 var anyDir= {
   root   : '.',
-  dirName: '/ventures/'
+  dirName: '/osx/'
 }
 
 module.exports = {
