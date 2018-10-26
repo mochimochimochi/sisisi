@@ -4,7 +4,6 @@ let footer = require('./modules/footer.js');
 let burger = require('./modules/burger.js');
 let mainImgText = require('./modules/mainimgtext.js');
 
-
 // let slider = require('./modules/slider.js');
 
 //jQuery
