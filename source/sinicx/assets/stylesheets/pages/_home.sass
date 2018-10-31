@@ -214,60 +214,25 @@
           padding-top: 5rem
           padding-bottom: 5rem
 
-      &.home__team
-        .home__team
-          &__mainImg
-            width: 78%
-            margin: 0 auto 3.6rem auto
-            img
-              width: 100%
-
-          &__textArea
-
-          &__btnArea
-            padding-top: 3rem
-            .p-linkBtn
-              width: 200px
-              height: 4rem
-              margin: 0 auto
-
-      &.home__inc
-        position: relative
-        padding: 7rem 0 5rem 0
-        background-image: url('/sinicx/assets/img/home/home_inc_bg.jpg')
-        background-repeat: no-repeat
-        background-position: center center
-        background-size: cover
-
+      &.home__office
         .p-chapter__inner
           display: flex
           justify-content: space-between
-          margin: auto
-
-          .home__inc__imgArea
-            display: flex
-            justify-content: center
-            align-items: center
+          flex-wrap: wrap
+          .home__chapter__title
+            width: 100%
+          .home__office__contact
             width: 50%
-            height: auto
-            background: #89c5eb
-            img
-              display: block
-              width: 80%
-              margin: 0 auto
+            h4
+              margin-top: 0
+              font-size: 1.8rem
 
-
-          .home__inc__textArea
+          .home__office__map
             width: 50%
-            padding: 4rem
-            background: palette('basic','white')
+            iframe
+              height: 500px
 
-            p
-              line-height: 2
 
-            .p-linkBtn
-              width: 200px
-              margin: 3rem auto 0 auto
 
 
 // @media(max-width: $width-mx)
@@ -292,8 +257,6 @@
                 @media(max-width: 720px)
                   font-size: 1.6rem
 
-        &.home__inc
-          padding: 7rem 2rem 5rem 2rem
 
 @media(max-width: 800px)
   .home
@@ -305,7 +268,11 @@
 
     .p-body
       .p-chapter
-
+        &.home__office
+          .p-chapter__inner
+            display: inherit
+            .home__office__contact,.home__office__map
+              width: 100%
 
 @media(max-width: 600px)
   .home
@@ -321,31 +288,6 @@
                 width: 48%
                 font-size: 1.8rem
                 margin-bottom: 2rem
-
-
-
-        &.home__team
-          .home__team
-            &__mainImg
-              width: 100%
-
-            &__btnArea
-              .p-linkBtn
-                width: 80%
-
-        &.home__inc
-          background: palette('site',(bgGray))
-          padding: 4rem 1rem
-          .p-chapter__inner
-            display: inherit
-            padding: 0
-            .home__inc__imgArea
-              width: 100%
-            .home__inc__textArea
-              width: 100%
-
-              .p-linkBtn
-                width: 80%
 
 @media(max-width: $width-sp)
   .home
@@ -365,34 +307,6 @@
             width: 100%
         .main__bg
           display: none
-
-
-    .p-lead.home__news
-      .p-lead__inner
-        .home__news__title
-          width: 100%
-          font-size: 3.6rem
-          text-align: center
-
-        .home__news__more
-          order: 3
-          width: 100%
-          text-align: right
-
-        .newsList
-          margin-bottom: 1rem
-          li
-            a
-              flex-wrap: wrap
-              &::after
-                display: none
-
-              .news__date
-                width: 100px
-
-              .news__title
-                width: 100%
-                margin-top: 1rem
 
     .p-body
       .p-chapter
@@ -434,6 +348,11 @@
                   .news__title
                     width: 100%
                     margin-top: 1rem
+        &.home__office
+          .p-chapter__inner
+            .home__office__map
+              iframe
+                height: 375px
 
 
   @media(max-width: $width-sp2)
