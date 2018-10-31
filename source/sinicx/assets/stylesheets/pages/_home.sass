@@ -62,6 +62,11 @@
   .p-body
     .p-chapter
       padding: 5rem 0
+      figure
+        margin: 0
+        img
+          width: 100%
+
       &__inner
         h3,figure
           +resetMP
@@ -87,12 +92,6 @@
         .p-chapter__inner
           padding-top: 8rem
           padding-bottom: 8rem
-        .home__about
-          &__mainImg
-            width: 100%
-            margin: 0
-            img
-              width: 100%
 
           //   width: 65%
           //   margin: 0 auto 2rem auto
@@ -123,6 +122,8 @@
           //       width: 100%
 
       &.home__news
+        padding-top: 0
+        padding-bottom: 0
         // border-bottom: 1px solid palette('site','borderG')
         .p-chapter__inner
           display: flex
@@ -206,54 +207,12 @@
               .news__title
                 width: calc(100% - 240px)
 
-      &.home__ptf
-        background-image: url('/sinicx/assets/img/home/home_ptf_bg.jpg')
-        background-repeat: no-repeat
-        background-size: cover
-        background-position: center center
-        background-attachment: fixed
-        .home__chapter__title
-          color: palette('basic','white')
-        .home__ptf
-          &__linkList
-            +resetMP
-            list-style: none
-            display: flex
-            justify-content: flex-start
-            flex-wrap: wrap
-            width: 100%
-            max-width: $width-mx
-            padding: 0 4rem
-            margin: 0 auto
-            li
-              width: 24%
-              margin-bottom: 2rem
-              &:not(:nth-child(4n))
-                margin-right: calc(4% / 3)
-              a
-                display: block
-                width: 100%
-                height: 100%
-                border: 1px solid palette('basic','white')
-                &:hover
-                  border-color: palette('site','skyblue')
-                &.u-noLink
-                  opacity: 1
-                img
-                  display: block
-                  width: 100%
-                // for IE11
-                _:-ms-lang(x), img
-                  display: inline-block
-              &.linkList__btnArea
-                display: flex
-                justify-content: center
-                align-items: center
-                background: transparent
-                .p-linkBtn
-                  width: 80%
-                  height: 4rem
-                  border-color: palette('site','skyblue')
+      &.home__internships
+        padding-top: 0
+        padding-bottom: 0
+        .p-chapter__inner
+          padding-top: 5rem
+          padding-bottom: 5rem
 
       &.home__team
         .home__team
@@ -311,39 +270,30 @@
               margin: 3rem auto 0 auto
 
 
-@media(max-width: $width-mx)
+// @media(max-width: $width-mx)
+//   .home
+//     .p-body
+//       .p-chapter
+
+
+@media(max-width: $width-pc)
   .home
+    .l-header
+      position: fixed
+      background: palette('basic','white')
+
     .p-body
       .p-chapter
-        &.home__ptf
-          .home__ptf
-            &__linkList
-              padding: 0 2rem
+        &.home__about
+          .home__about
+            &__contentsList
+              li
+                font-size: 2rem
+                @media(max-width: 720px)
+                  font-size: 1.6rem
 
-
-  @media(max-width: $width-pc)
-    .home
-      .l-header
-        position: fixed
-        background: palette('basic','white')
-
-      .p-body
-        .p-chapter
-          &.home__about
-            .home__about
-              &__contentsList
-                li
-                  font-size: 2rem
-                  @media(max-width: 720px)
-                    font-size: 1.6rem
-
-          &.home__ptf
-            .home__ptf
-              &__linkList
-                padding: 0 1rem
-
-          &.home__inc
-            padding: 7rem 2rem 5rem 2rem
+        &.home__inc
+          padding: 7rem 2rem 5rem 2rem
 
 @media(max-width: 800px)
   .home
@@ -355,8 +305,7 @@
 
     .p-body
       .p-chapter
-        &.home__ptf
-          background-attachment: inherit
+
 
 @media(max-width: 600px)
   .home
@@ -373,20 +322,7 @@
                 font-size: 1.8rem
                 margin-bottom: 2rem
 
-        &.home__ptf
-          .home__ptf
-            &__linkList
-              li
-                width: 48%
-                &:not(:nth-child(4n))
-                  margin-right: 0
-                &:not(:nth-child(2n))
-                  margin-right: 4%
-                &:nth-of-type(6) + li
-                 display: none
-                &.linkList__btnArea
-                  width: 100%
-                  margin-top: 1rem
+
 
         &.home__team
           .home__team
