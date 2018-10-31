@@ -33,11 +33,29 @@
     float: right
     font-size: 1.1rem
 
-  &__fb
+  &__social
     float: right
+
+  &__li
+    display: inline-block
+    width: 39px
+    margin-right: 11px
+    transform: translateY(-8px)
+    img
+      width: 100%
+
+  &__fb
     display: inline-block
     width: 30px
-    margin-right: 30px
+    margin-right: 20px
+    transform: translateY(-8px)
+    img
+      width: 100%
+
+  &__tw
+    display: inline-block
+    width: 30px
+    margin-right: 20px
     transform: translateY(-8px)
     img
       width: 100%
@@ -65,11 +83,14 @@
       line-height: 1.4
       text-align: center
 
-    &__fb
+    &__social
       float: none
       order: -1
       transform: none
       margin: 0 0 1rem 0
+
+    &__tw
+      margin-right: 0
 
 @media(max-width: $width-sp)
   .l-footer
