@@ -1,0 +1,142 @@
+// 各ページ毎のスタイル
+
+// internships詳細ページ
+.internships.article
+  .l-header
+    border-bottom: 1px solid palette('site','borderG')
+  .p-body
+    .p-chapter
+      &.internshipsArticle
+        padding-top: 0
+        .p-chapter__inner
+
+          .internships__titleArea
+            +resetMP
+            position: relative
+            display: flex
+            flex-wrap: wrap
+            justify-content: flex-start
+            align-items: center
+            width: 100%
+            height: 100%
+            padding: 1em 0
+            margin-bottom: 4rem
+            font-size: 1.4rem
+            font-weight: 400
+            border-bottom: 3px solid palette('site','skyblue')
+
+            .internships__cate
+              display: flex
+              justify-content: center
+              align-items: center
+              width: 120px
+              height: 28px
+              color: palette('basic','white')
+              font-family: $oswald
+              font-size: 1.6rem
+              text-align: center
+              line-height: 1
+              &.internships
+                background: palette('site','cateN')
+              &.event
+                background: palette('site','cateE')
+
+            .internships__date
+              width: 100px
+              text-align: center
+
+            .internships__title
+              width: 100%
+              margin-top: 1rem
+              font-size: 2.4rem
+              line-height: 1.4
+
+          .internships__bodyArea
+            padding: 0 1em
+
+            p,ul,ol,dl
+              font-size: 1.4rem
+              line-height: 1.6
+
+            ol
+              ol
+                padding-left: 1em
+                margin-bottom: 1em
+
+            dl
+              dt
+                font-weight: 700
+              dd
+                margin-left: 0
+                margin-bottom: 1em
+
+            a
+              color: palette('anchor','base')
+              text-decoration: underline
+              &:hover
+                text-decoration: none
+
+
+
+            .c-title__box
+              margin-top: 7rem
+
+            .c-cBox__gray
+              margin-top: 4rem
+
+            .u-small
+              font-size: 1.3rem
+
+            .overImg
+              width: 100%
+              // overflow: auto
+              // -webkit-overflow-scrolling : touch
+              img
+                width: 100%
+                // min-width: 700px
+      &.internshipsContact
+        padding-top: 3rem
+        padding-bottom: 3rem
+        border-top: 1px solid palette('site','borderG')
+        h4
+          margin-top: 0
+          font-size: 1.8rem
+
+@media(max-width: $width-pc)
+  .internships.article
+    .p-lead
+      .breadcrumb
+        padding: 0
+
+// @media(max-width: 760px)
+//   .internships.article
+//     .p-body
+//       .p-chapter
+//         &.internshipsArticle
+//           .p-chapter__inner
+//             .internships__bodyArea
+//               .overImg
+//                 overflow: auto
+//                 -webkit-overflow-scrolling : touch
+
+@media(max-width: $width-sp)
+  .internships.article
+    .p-catch
+      .p-catch__mainImgArea
+        .main__catch,.main__bg
+          display: block
+
+    .p-body
+      .p-chapter
+        &__inner
+          .c-fBox
+            flex-wrap: wrap
+            .c-fBox__textArea
+              width: 100%
+            .c-fBox__imgArea
+              width: 100%
+      .p-chapter
+        &.internshipsArticle
+          .p-chapter__inner
+            .internships__bodyArea
+              padding: 0
