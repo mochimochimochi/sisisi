@@ -8,25 +8,36 @@
 
   .p-catch
     &__mainImgArea
-      // height: 540px
-      // height: calc(100vh - 80px)
       height: 100vh
       position: relative
       overflow: hidden
-      background-image: url('/sinicx/assets/img/home/home_main_bg.jpg')
+      // background-image: url('/sinicx/assets/img/home/home_main_bg.jpg')
       background-repeat: no-repeat
-      // background-size: auto 100%
       background-size: cover
-      // background-position: center center
-      background-position: center 5%
+      background-position: 70% center
       background-attachment: fixed
+      text-align: center
       img
         width: 100%
+
+      #mainImgMovie
+        position: fixed
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        z-index: -100
+        width: auto
+        height: auto
+        min-width: 100%
+        min-height: 100%
 
       .main__bg,.main__bg__sp
         display: none
 
   .p-body
+    background: palette('basic','white')
+
+
     .p-chapter
       padding: 5rem 0
       figure
@@ -241,11 +252,12 @@
 
 @media(max-width: 800px)
   .home
-    // .p-catch
-    //   &__mainImgArea
-    //     height: auto
-    //     .main__bg
-    //       display: block
+    .p-catch
+      &__mainImgArea
+        background-image: url('/sinicx/assets/img/home/home_main_bg.jpg')
+        #mainImgMovie
+          display: none
+
 
     .p-body
       .p-chapter
