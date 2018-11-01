@@ -31,7 +31,7 @@
         min-width: 100%
         min-height: 100%
 
-      .main__bg,.main__bg__sp
+      .main__bg__sp
         display: none
 
   .p-body
@@ -58,6 +58,7 @@
           width: 100%
 
       .home__chapter__title
+        width: 100%
         margin: 0 0 4rem 0
         text-align: center
         font-family: $oswald
@@ -171,8 +172,27 @@
         padding-top: 0
         padding-bottom: 0
         .p-chapter__inner
+          display: flex
+          flex-flow: row wrap
+          justify-content: space-between
+          align-items: flex-end
           padding-top: 5rem
           padding-bottom: 5rem
+
+        .home__internships__more
+          width: 100%
+          margin: 0
+          text-align: right
+          a
+            font-family: $oswald
+            font-size: 1.8rem
+            line-height: 1
+            &::before
+              +icon
+              content: '\EA07'
+              margin-right: 1rem
+              font-size: 1.2rem
+              vertical-align: baseline
 
         .internshipsList
           +resetMP
@@ -290,20 +310,6 @@
       .p-catch__mainImgArea
         height: auto
         background-image: none
-        // .main__catchArea
-        //   width: 74%
-        //   height: 36%
-        //   .main__catch01
-        //     display: none
-        //   .main__catch01sp
-        //     opacity: 0
-        //     display: block
-        //     width: 76%
-        //     margin: 0 auto 4% auto
-        //   .main__catch02
-        //     width: 100%
-        .main__bg
-          display: none
 
     .p-body
       .p-chapter
@@ -312,13 +318,6 @@
           font-size: 3.6rem
           span
             font-size: 1.6rem
-        // &.home__about
-        //   .home__about
-        //     &__btnArea
-        //       width: 80%
-        //       .p-linkBtn
-        //         height: auto
-        //         padding: .5em 1em
 
         .p-chapter__bg
           height: auto
@@ -336,8 +335,6 @@
 
             .home__news__more
               order: 3
-              // width: 100%
-              // text-align: right
 
             .newsList
               margin-bottom: 1rem
@@ -358,6 +355,11 @@
             background-image: none
 
         &.home__internships
+          .p-chapter__inner
+            .home__internships__more
+              order: 4
+            .internshipsList
+              margin-bottom: 1rem
           .home__internships__mainImg
             background-image: none
 
