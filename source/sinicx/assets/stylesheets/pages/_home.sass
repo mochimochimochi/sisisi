@@ -8,54 +8,20 @@
 
   .p-catch
     &__mainImgArea
-      height: 540px
+      // height: 540px
+      // height: calc(100vh - 80px)
+      height: 100vh
       position: relative
       overflow: hidden
       background-image: url('/sinicx/assets/img/home/home_main_bg.jpg')
       background-repeat: no-repeat
       // background-size: auto 100%
-      // background-size: cover
-      background-size: contain
+      background-size: cover
       // background-position: center center
       background-position: center 5%
       background-attachment: fixed
       img
         width: 100%
-
-      // .main__catchArea
-      //   position: absolute
-      //   top: 0
-      //   right: 0
-      //   bottom: 0
-      //   left: 0
-      //   margin: auto
-      //   width: 52%
-      //   height: 16%
-      //   .main__catch01
-      //     opacity: 0
-      //     width: 100%
-      //     margin-bottom: 3%
-      //     &.is-active
-      //       @extend .animated
-      //       @extend .fadeInLeft
-      //       animation-duration: 1.5s
-
-        // .main__catch01sp
-        //   display: none
-        //   &.is-active
-        //     @extend .animated
-        //     @extend .fadeInLeft
-        //     animation-duration: 1.5s
-
-        // .main__catch02
-        //   opacity: 0
-        //   width: 80%
-        //   margin: 0 auto
-        //   &.is-active
-        //     @extend .animated
-        //     @extend .fadeInRight
-        //     animation-duration: 1.5s
-        //     animation-delay: 0.8s
 
       .main__bg,.main__bg__sp
         display: none
@@ -72,6 +38,14 @@
         h3,figure
           +resetMP
 
+      &__bg
+        height: 600px
+        background-repeat: no-repeat
+        background-size: cover
+        background-attachment: fixed
+        img
+          width: 100%
+
       .home__chapter__title
         margin: 0 0 4rem 0
         text-align: center
@@ -86,41 +60,13 @@
 
       &.home__about
         padding: 0
-        // background-image: url('/sinicx/assets/img/home/home_about_main.jpg')
-        // background-repeat: no-repeat
-        // background-size: cover
-        // background-position: center center
+
         .p-chapter__inner
           padding-top: 8rem
           padding-bottom: 8rem
 
-          //   width: 65%
-          //   margin: 0 auto 2rem auto
-          //   img
-          //     width: 100%
-          // &__btnArea
-          //   width: 40%
-          //   margin: 2rem auto
-          //   .p-linkBtn
-          //     height: 3em
-          //     border-radius: 30px
-          //     padding: .9em 1em
-          // &__contentsList
-          //   +resetMP
-          //   list-style: none
-          //   width: 100%
-          //   display: flex
-          //   justify-content: space-between
-          //   li
-          //     width: 24%
-          //     padding: 1rem
-          //     color: palette('basic','white')
-          //     background: palette('site','skyblue')
-          //     font-family: $oswald
-          //     font-size: 2.6rem
-          //     text-align: center
-          //     img
-          //       width: 100%
+        .home__about__mainImg
+          background-image: url('/sinicx/assets/img/home/home_about_main.jpg')
 
       &.home__news
         padding-top: 0
@@ -207,6 +153,8 @@
 
               .news__title
                 width: calc(100% - 240px)
+        .home__news__mainImg
+          background-image: url('/sinicx/assets/img/home/home_news_main.jpg')
 
       &.home__internships
         padding-top: 0
@@ -243,6 +191,8 @@
               &:hover
                 background: palette('site','bgGray')
 
+        .home__internships__mainImg
+          background-image: url('/sinicx/assets/img/home/home_internships_main.jpg')
 
 
       &.home__office
@@ -291,14 +241,16 @@
 
 @media(max-width: 800px)
   .home
-    .p-catch
-      &__mainImgArea
-        height: auto
-        .main__bg
-          display: block
+    // .p-catch
+    //   &__mainImgArea
+    //     height: auto
+    //     .main__bg
+    //       display: block
 
     .p-body
       .p-chapter
+        &__bg
+          background-position: center
         &.home__office
           .p-chapter__inner
             display: inherit
@@ -324,18 +276,20 @@
   .home
     .p-catch
       .p-catch__mainImgArea
-        .main__catchArea
-          width: 74%
-          height: 36%
-          .main__catch01
-            display: none
-          .main__catch01sp
-            opacity: 0
-            display: block
-            width: 76%
-            margin: 0 auto 4% auto
-          .main__catch02
-            width: 100%
+        height: auto
+        background-image: none
+        // .main__catchArea
+        //   width: 74%
+        //   height: 36%
+        //   .main__catch01
+        //     display: none
+        //   .main__catch01sp
+        //     opacity: 0
+        //     display: block
+        //     width: 76%
+        //     margin: 0 auto 4% auto
+        //   .main__catch02
+        //     width: 100%
         .main__bg
           display: none
 
@@ -353,6 +307,14 @@
         //       .p-linkBtn
         //         height: auto
         //         padding: .5em 1em
+
+        .p-chapter__bg
+          height: auto
+
+        &.home__about
+          .home__about__mainImg
+            background-image: none
+
         &.home__news
           .p-chapter__inner
             .home__news__title
@@ -379,6 +341,15 @@
                   .news__title
                     width: 100%
                     margin-top: 1rem
+
+          .home__news__mainImg
+            background-image: none
+
+        &.home__internships
+          .home__internships__mainImg
+            background-image: none
+
+
         &.home__office
           .p-chapter__inner
             .home__office__map
