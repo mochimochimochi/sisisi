@@ -1,0 +1,81 @@
+// 各ページ毎のスタイル
+
+// internships
+.internships
+  .p-catch
+    &__mainImgArea
+      position: relative
+      min-height: 150px
+      img.main__bg
+        width: 100%
+        min-height: 150px
+
+      .main__catch
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        z-index: 5000
+        margin: auto
+        width: 20%
+        min-width: 170px
+        max-width: 380px
+
+  .p-body
+    .p-chapter
+      padding: 0
+      &.internshipsListArea
+        .internshipsList
+          +resetMP
+          list-style: none
+          width: 100%
+          margin-top: 2rem
+          li
+            border-width: 1px 1px 0 1px
+            border-color: palette('site','borderG')
+            border-style: solid
+            &:last-of-type
+              border-bottom-width: 1px
+            a
+              position: relative
+              display: flex
+              justify-content: flex-start
+              align-items: center
+              width: 100%
+              height: 100%
+              padding: 1em 2em 1em 1em
+              font-size: 1.4rem
+              &::before
+                +icon
+                content: '\EA07'
+                margin-right: 1em
+                font-size: 1.2rem
+              &:hover
+                background: palette('site','bgGray')
+
+@media(max-width: $width-pc)
+  .internships
+    .p-catch
+      &__mainImgArea
+        position: relative
+        overflow: hidden
+        img.main__bg
+          position: absolute
+          top: 0
+          right: 0
+          bottom: 0
+          left: 0
+          margin: auto
+          z-index: 1
+          width: auto
+          transform: translateX(-15%)
+
+
+
+@media(max-width: $width-sp)
+  .internships
+    .p-catch
+      .p-catch__mainImgArea
+        .main__catch,.main__bg
+          display: block
