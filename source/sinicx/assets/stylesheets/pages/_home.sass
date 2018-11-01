@@ -8,12 +8,12 @@
       position: relative
       height: 100vh
       overflow: hidden
-      // background-image: url('/sinicx/assets/img/home/home_main_bg.jpg')
       background-repeat: no-repeat
       background-size: cover
       background-position: 70% center
       background-attachment: fixed
       text-align: center
+
       img
         width: 100%
 
@@ -274,6 +274,7 @@
             iframe
               height: 500px
 
+
 @media(max-width: $width-pc)
   .home
     .l-header
@@ -296,6 +297,7 @@
     .p-catch
       &__mainImgArea
         background-image: url('/sinicx/assets/img/home/home_main_bg.jpg')
+        background-attachment: inherit
         #mainImgMovie
           display: none
 
@@ -304,6 +306,7 @@
       .p-chapter
         &__bg
           background-position: center
+          background-attachment: inherit
         &.home__office
           .p-chapter__inner
             display: inherit
