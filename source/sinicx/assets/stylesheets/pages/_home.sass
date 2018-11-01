@@ -3,13 +3,10 @@
 // home
 .home
 
-  .l-header
-    // background: rgba(palette('basic','white'),0.7)
-
   .p-catch
     &__mainImgArea
-      height: 100vh
       position: relative
+      height: 100vh
       overflow: hidden
       // background-image: url('/sinicx/assets/img/home/home_main_bg.jpg')
       background-repeat: no-repeat
@@ -33,6 +30,39 @@
 
       .main__bg__sp
         display: none
+
+      .scrollBtn
+        position: absolute
+        bottom: 100px
+        left: 50%
+        transform: translateX(-50%)
+        display: block
+        width: 60px
+        height: 60px
+        animation: moving01 3s ease infinite
+        &::after
+          +icon
+          content: '\EA01'
+          color: palette('basic','white')
+          font-size: 6rem
+          opacity: 0.6
+        @keyframes moving01
+          0%
+            transform: translateY(0)
+          5%
+            transform: translateY(0)
+          10%
+            transform: translateY(0)
+          20%
+            transform: translateY(-5px)
+          25%
+            transform: translateY(0)
+          30%
+            transform: translateY(-5px)
+          50%
+            transform: translateY(0)
+          100%
+            transform: translateY(0)
 
   .p-body
     background: palette('basic','white')
@@ -244,15 +274,6 @@
             iframe
               height: 500px
 
-
-
-
-// @media(max-width: $width-mx)
-//   .home
-//     .p-body
-//       .p-chapter
-
-
 @media(max-width: $width-pc)
   .home
     .l-header
@@ -310,6 +331,8 @@
       .p-catch__mainImgArea
         height: auto
         background-image: none
+        .scrollBtn
+          display: none
 
     .p-body
       .p-chapter
