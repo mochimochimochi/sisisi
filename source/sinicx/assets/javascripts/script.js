@@ -3,6 +3,8 @@ let gnav = require('./modules/gnav.js');
 let footer = require('./modules/footer.js');
 let burger = require('./modules/burger.js');
 let mainImgText = require('./modules/mainimgtext.js');
+let safari = require('./modules/safari.js');
+
 
 // let slider = require('./modules/slider.js');
 
@@ -14,6 +16,8 @@ $(function(){
   burger();
   // footer
   footer();
+  // for safari
+  safari();
 
 });
 
