@@ -204,6 +204,44 @@
         .home__news__mainImg
           background-image: url('/sinicx/assets/img/home/home_news_main.jpg')
 
+      &.home__members
+        padding-top: 0
+        padding-bottom: 0
+        .p-chapter__inner
+          padding-top: 5rem
+          padding-bottom: 5rem
+        .membersList
+          list-style: none
+          +resetMP
+          display: flex
+          li
+            width: 26%
+            a
+              width: 100%
+            figure
+              margin: 0
+              img
+                width: 100%
+                margin-bottom: 2rem
+              figcaption
+                font-size: 1.8rem
+                line-height: 1
+                text-align: center
+          li:not(:nth-of-type(3n))
+            margin-right: 11%
+        .c-linkBtn
+          width: 100%
+          padding: 1em
+          margin: 6rem 0 0 0
+          border-color: palette('site','borderG')
+          font-size: 1.8rem
+          line-height: 1
+          text-align: center
+          &:hover
+            color: palette('site','skyblue')
+        .home__members__mainImg
+          background-image: url('/sinicx/assets/img/home/home_about_main.jpg')
+
       &.home__internships
         padding-top: 0
         padding-bottom: 0
@@ -385,6 +423,18 @@
 
           .home__news__mainImg
             background-image: none
+
+        &.home__members
+          .membersList
+            li
+              figure
+                img
+                  margin-bottom: 1em
+                figcaption
+                  font-size: 1.4rem
+          .c-linkBtn
+            margin: 3rem 0 0 0
+
 
         &.home__internships
           .p-chapter__inner

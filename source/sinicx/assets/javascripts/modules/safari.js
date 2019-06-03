@@ -4,8 +4,8 @@ let $userAgent = window.navigator.userAgent.toLowerCase();
 // console.log($userAgent);
 let $chrome = $userAgent.indexOf('chrome');
 let $safari = $userAgent.indexOf('safari');
-console.log($chrome);
-console.log($safari);
+// console.log($chrome);
+// console.log($safari);
 
 if ($chrome == -1) {
   if($safari !== -1) {
