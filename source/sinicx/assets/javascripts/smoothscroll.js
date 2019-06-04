@@ -1,7 +1,9 @@
 // smooth scroll
 
 $(function() {
-  $('a[href^="#"]').click(function(){
+  let $not = '.membersModal';
+
+  $('a[href^="#"]').not($not).click(function(){
     var headerHight = 57;
     var speed = 500;
     var href= $(this).attr("href");

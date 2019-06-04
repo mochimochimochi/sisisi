@@ -241,6 +241,8 @@
             color: palette('site','skyblue')
         .home__members__mainImg
           background-image: url('/sinicx/assets/img/home/home_about_main.jpg')
+        .membersModal__contents
+          display: none
 
       &.home__internships
         padding-top: 0
@@ -317,6 +319,50 @@
             width: 50%
             iframe
               height: 500px
+  // modal
+  #cboxOverlay
+    background: rgba(0,0,0,0.7)
+  #colorbox
+    #cboxContent
+      margin-top: 60px
+    #cboxLoadedContent
+      background: palette('basic','white')
+    #cboxClose
+      position: absolute
+      top: -60px
+      width: 50px
+      height: 50px
+      background-color: transparent
+      background-image: url('/sinicx/assets/img/common/icon_close.png')
+      background-size: cover
+      background-position: center center
+      border: none
+      text-indent: -9999px
+    .membersModal__contents
+      .contents__inner
+        display: flex
+        padding: 3rem
+        .contentsImgArea
+          width: 30%
+          >img
+            width: 100%
+            margin-bottom: 2rem
+          .snsLink
+            display: block
+            font-size: 2rem
+            >img
+              width: 30px
+              height: 30px
+              margin: 0 1rem
+              vertical-align: text-bottom
+        .contentsTextArea
+          width: 70%
+          padding-left: 5%
+          .contentsTitle
+            margin: 0
+            font-size: 4rem
+          p
+            font-size: 2rem
 
 
 @media(max-width: $width-pc)
