@@ -1,0 +1,187 @@
+// 各ページ毎のスタイル
+
+// members
+.members
+  .p-catch
+    &__mainImgArea
+      position: relative
+      min-height: 150px
+      img.main__bg
+        width: 100%
+        min-height: 150px
+
+      .main__catch
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        z-index: 5000
+        margin: auto
+        width: 10%
+        min-width: 100px
+        max-width: 190px
+
+  .p-body
+    .p-chapter
+      padding: 0
+      &.membersListArea
+        .chapter__title
+          display: none
+        .membersList
+          list-style: none
+          +resetMP
+          display: flex
+          flex-wrap: wrap
+          li
+            width: 49%
+            margin-bottom: 2rem
+            a
+              position: relative
+              display: block
+              width: 100%
+              border: 1px solid palette('site','borderG')
+              &:hover
+                background: palette('site','bgGray')
+            figure
+              margin: 0
+              img
+                width: 40%
+              figcaption
+                position: absolute
+                top: 0
+                right: 0
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 60%
+                height: 100%
+                font-size: 1.8rem
+                line-height: 1
+                text-align: center
+          li:not(:nth-of-type(2n))
+            margin-right: 2%
+        .c-linkBtn
+          width: 100%
+          padding: 1em
+          margin: 6rem 0 0 0
+          border-color: palette('site','borderG')
+          font-size: 1.8rem
+          line-height: 1
+          text-align: center
+          &:hover
+            color: palette('site','skyblue')
+        .home__members__mainImg
+          background-image: url('/sinicx/assets/img/home/home_about_main.jpg')
+        .membersModal__contents
+          display: none
+  // modal
+  #cboxOverlay
+    background: rgba(0,0,0,0.7)
+  #colorbox
+    #cboxContent
+      margin-top: 60px
+    #cboxLoadedContent
+      background: palette('basic','white')
+    #cboxClose
+      position: absolute
+      top: -60px
+      width: 50px
+      height: 50px
+      background-color: transparent
+      background-image: url('/sinicx/assets/img/common/icon_close.png')
+      background-size: cover
+      background-position: center center
+      border: none
+      text-indent: -9999px
+    .membersModal__contents
+      .contents__inner
+        display: flex
+        padding: 3rem
+        .contentsImgArea
+          width: 30%
+          >img
+            width: 100%
+            margin-bottom: 2rem
+          .snsLink
+            display: block
+            font-size: 2rem
+            >img
+              width: 30px
+              height: 30px
+              margin: 0 1rem
+              vertical-align: text-bottom
+        .contentsTextArea
+          width: 70%
+          padding-left: 5%
+          .contentsTitle
+            margin: 0
+            font-size: 4rem
+          p
+            font-size: 2rem
+
+
+@media(max-width: $width-pc)
+  .members
+    .p-catch
+      &__mainImgArea
+        position: relative
+        overflow: hidden
+        img.main__bg
+          position: absolute
+          top: 0
+          right: 0
+          bottom: 0
+          left: 0
+          margin: auto
+          z-index: 1
+          width: auto
+          transform: translateX(-15%)
+
+@media(max-width: 600px)
+  .members
+    .p-body
+      .p-chapter
+        &.membersListArea
+          .membersList
+            display: inherit
+            li
+              width: 100%
+            li:not(:nth-of-type(2n))
+              margin-right: 0
+
+    #colorbox
+      #cboxContent
+        margin-top: 50px
+      #cboxClose
+        position: absolute
+        top: -40px
+        width: 30px
+        height: 30px
+      .membersModal__contents
+        .contents__inner
+          display: inherit
+          padding: 2rem
+          .contentsImgArea
+            width: 100%
+            .snsLink
+              font-size: 1.6rem
+              >img
+                width: 20px
+                height: 20px
+          .contentsTextArea
+            width: 100%
+            padding-left: 0
+            .contentsTitle
+              margin-top: 1rem
+              font-size: 2.6rem
+            p
+              font-size: 1.6rem
+
+
+@media(max-width: $width-sp)
+  .members
+    .p-catch
+      .p-catch__mainImgArea
+        .main__catch,.main__bg
+          display: block
