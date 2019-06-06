@@ -349,19 +349,30 @@
             width: 100%
             margin-bottom: 2rem
           .snsLink
-            display: block
-            font-size: 2rem
+            display: inline-block
+            // font-size: 1.6rem
             >img
+              display: block
               width: 30px
               height: 30px
-              margin: 0 1rem
+              margin: 0 0.5rem
               vertical-align: text-bottom
+            &::after
+              display: none
+          .snsLink:last-of-type
+            >img
+              margin: 0
         .contentsTextArea
           width: 70%
           padding-left: 5%
           .contentsTitle
             margin: 0
             font-size: 4rem
+            line-height: 1.2
+            >span
+              display: block
+              font-size: 1.6rem
+              font-weight: 400
           p
             font-size: 2rem
 
@@ -432,11 +443,11 @@
           padding: 2rem
           .contentsImgArea
             width: 100%
-            .snsLink
-              font-size: 1.6rem
-              >img
-                width: 20px
-                height: 20px
+            // .snsLink1
+              // font-size: 1.2rem
+              // >img
+              //   width: 20px
+              //   height: 20px
           .contentsTextArea
             width: 100%
             padding-left: 0
