@@ -214,8 +214,14 @@
           list-style: none
           +resetMP
           display: flex
+          justify-content: space-between
+          flex-wrap: wrap
           li
+            display: none
             width: 26%
+            margin-bottom: 2rem
+            &.is-active
+              display: inherit
             a
               width: 100%
             figure
@@ -227,8 +233,8 @@
                 font-size: 1.8rem
                 line-height: 1
                 text-align: center
-          li:not(:nth-of-type(3n))
-            margin-right: 11%
+          // li:not(:nth-of-type(3n))
+          //   margin-right: 11%
         .c-linkBtn
           width: 100%
           padding: 1em
