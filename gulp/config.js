@@ -16,6 +16,7 @@ module.exports = {
     root               : 'source'+anyDir.dirName,
     stylesheets        : 'source'+anyDir.dirName+'assets/stylesheets/',
     javascripts        : 'source'+anyDir.dirName+'assets/javascripts/',
+    jscopy             : 'source'+anyDir.dirName+'assets/js/',
     images             : 'source'+anyDir.dirName+'assets/images/',
     icons              : 'source'+anyDir.dirName+'assets/icons/',
     templates          : 'source'+anyDir.dirName+'assets/templates/',
